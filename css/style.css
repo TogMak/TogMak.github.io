@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+
+body {
+
+	display: grid;
+	grid-template-columns: repeat(1, 1280px);
+	grid-template-rows: 50px 1840px 50px;
+	grid-template-areas:"header" 
+						"main"
+						"footer";
+	grid-gap: 0px;
+	padding-top: 5em;
+	padding-bottom: 5em;
+	font-family: "Oxanium", serif;
+	background-color: #606c38;
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+h1 {
+	font-size: 2em;
+	margin-top: 0.67em;
+	margin-bottom: 0.67em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+	color: #bc6c25;
+}
+
+h2 {
+	font-size: 1.5em;
+	margin-top: 0.67em;
+	margin-bottom: 0.67em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+	color: #bc6c25;
+}
+
+h3 {
+	font-size: 1.25em;
+	margin-top: 0.67em;
+	margin-bottom: 0.67em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+	color: #bc6c25;
+}
+
+h4 {
+	font-size: 1em;
+	margin-top: 0.67em;
+	margin-bottom: 0.67em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+	color: #bc6c25;
+}
+
+ 
+p {
+line-height:1.5;
+}
+/* unvisited link */
+a:link {
+  color: #778da9;
+}
+
+/* visited link */
+a:visited {
+  color: #f77f00;
+}
+
+/* mouse over link */
+a:hover {
+  color: #00798c;
+}
+
+/* selected link */
+a:active {
+  color: #eae2b7;
+}
+.footer>p {
+	padding-left: 1em;
+}
+
+.header {
+	grid-area: header;
+	height: 50px;
+	background: #283618;
+	width: 100%;
+
+}
+
+.footer {
+	grid-area: footer;
+	background: #283618;
+	width: 100%;
+	color: #e8f1f2;
+
+}
+
+.main {
+	display: grid;
+	grid-template-columns: repeat(3, 385px);
+	grid-template-rows: 70px 350px 70px 400px 70px 730px;
+	grid-template-areas: "home home home"
+		"backgroundflag backgroundtext backgroundright"
+		"geographytitle geographytitle geographytitle"
+		"geographyleft geographycenter geographyright"
+		"spacetitle spacetitle spacetitle"
+		"spaceleft spacemid spaceright";
+	grid-gap: 30px;
+	text-align: left;
+	background: #faedcd;
+	color: #283618;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+
+.navigation {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+	list-style: none;
+	margin: 0;
+	background: #283618;
+}
+
+.navigation a {
+	text-decoration: none;
+	display: block;
+	padding: 1em;
+	color: #e8f1f2;
+}
+
+.navigation a:hover {
+	background: #bc6c25;
+}
+
+.home {
+	grid-area: home;
+}
+
+.backgroundflag {
+	grid-area: backgroundflag;
+}
+
+
+.backgroundtext {
+	grid-area: backgroundtext;
+
+}
+
+.backgroundright {
+	grid-area: backgroundright;
+	padding-top:40px;
+}
+
+.geographytitle {
+	grid-area: geographytitle;
+}
+
+.geographyleft {
+	grid-area: geographyleft;
+}
+
+.geographycenter {
+	grid-area: geographycenter;
+}
+
+.geographyright {
+	grid-area: geographyright;
+}
+
+.spacetitle {
+	grid-area: spacetitle;
+}
+
+.spaceleft {
+	grid-area: spaceleft;
+}
+
+.spacemid {
+	grid-area: spacemid;
+}
+
+.spaceright {
+	grid-area: spaceright;
+}
+
+.sourcecls {
+	font-size: 0.7em;
+}
