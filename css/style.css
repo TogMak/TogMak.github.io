@@ -1,197 +1,199 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html {
+    background-image: linear-gradient(240deg, #4B4376, #1A1A1D);
+}
 
 body {
-
-	display: grid;
-	grid-template-columns: repeat(1, 1280px);
-	grid-template-rows: 50px 1840px 50px;
-	grid-template-areas:"header" 
-						"main"
-						"footer";
-	grid-gap: 0px;
-	padding-top: 5em;
-	padding-bottom: 5em;
-	font-family: "Oxanium", serif;
-	background-color: #606c38;
-	max-width: 1280px;
-	margin-left: auto;
-	margin-right: auto;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
 }
 
-
-h1 {
-	font-size: 2em;
-	margin-top: 0.67em;
-	margin-bottom: 0.67em;
-	margin-left: 0;
-	margin-right: 0;
-	font-weight: bold;
-	color: #bc6c25;
+.container {
+    display: grid;
+    grid-template-areas: "nav main";
+    grid-template-rows: 100vh 1fr;
+    grid-template-columns: 1fr 5fr;
 }
 
-h2 {
-	font-size: 1.5em;
-	margin-top: 0.67em;
-	margin-bottom: 0.67em;
-	margin-left: 0;
-	margin-right: 0;
-	font-weight: bold;
-	color: #bc6c25;
+.nav {
+    grid-area: nav;
+    display: inline-grid;
+    justify-items: center;
+    align-content: center;
+    border-right: 1px solid #373036;
 }
 
-h3 {
-	font-size: 1.25em;
-	margin-top: 0.67em;
-	margin-bottom: 0.67em;
-	margin-left: 0;
-	margin-right: 0;
-	font-weight: bold;
-	color: #bc6c25;
+.nav-ul {
+    padding: 0;
+    margin: 0;
 }
 
-h4 {
-	font-size: 1em;
-	margin-top: 0.67em;
-	margin-bottom: 0.67em;
-	margin-left: 0;
-	margin-right: 0;
-	font-weight: bold;
-	color: #bc6c25;
+.nav-li{
+    list-style-type: none;
 }
 
- 
-p {
-line-height:1.5;
+a {
+    text-decoration: none;
+    font-size: 3.7rem;
+    font-weight: 700;
 }
-/* unvisited link */
+
+a,
 a:link {
-  color: #778da9;
+    color: #E4B1F0;
 }
-
-/* visited link */
-a:visited {
-  color: #f77f00;
-}
-
-/* mouse over link */
+a,
 a:hover {
-  color: #00798c;
+    color: white;
 }
-
-/* selected link */
+a,
+a:visited {
+    color: #a269af;
+}
+a,
+a:visited:hover{
+    color: white;
+}
+a,
 a:active {
-  color: #eae2b7;
+    color: #eae2b7;
 }
-.footer>p {
-	padding-left: 1em;
-}
-
-.header {
-	grid-area: header;
-	height: 50px;
-	background: #283618;
-	width: 100%;
-
+a,
+a::after{
+    color: #6e2f7c;
 }
 
-.footer {
-	grid-area: footer;
-	background: #283618;
-	width: 100%;
-	color: #e8f1f2;
-
+.active {
+    color: #B692C2 !important;
+    text-decoration: underline !important;
 }
 
 .main {
-	display: grid;
-	grid-template-columns: repeat(3, 385px);
-	grid-template-rows: 70px 350px 70px 400px 70px 730px;
-	grid-template-areas: "home home home"
-		"backgroundflag backgroundtext backgroundright"
-		"geographytitle geographytitle geographytitle"
-		"geographyleft geographycenter geographyright"
-		"spacetitle spacetitle spacetitle"
-		"spaceleft spacemid spaceright";
-	grid-gap: 30px;
-	text-align: left;
-	background: #faedcd;
-	color: #283618;
-	padding-left: 2em;
-	padding-right: 2em;
+    grid-area: main;
 }
 
-
-.navigation {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: flex-end;
-	list-style: none;
-	margin: 0;
-	background: #283618;
+.index-screen {
+    display: inline-grid;
+    width: 100%;
+    height: 100vh;
+    justify-items: center;
+    align-content: center;
+    grid-template-areas:
+        'greetings'
+        'summary';
+    color: gainsboro;
 }
 
-.navigation a {
-	text-decoration: none;
-	display: block;
-	padding: 1em;
-	color: #e8f1f2;
+.greetings {
+    grid-area: greetings;
 }
 
-.navigation a:hover {
-	background: #bc6c25;
+#greetingText {
+    font-size: 8rem;
+    margin-top: 0px;
 }
 
-.home {
-	grid-area: home;
+.summary {
+    grid-area: summary;
 }
 
-.backgroundflag {
-	grid-area: backgroundflag;
+.text {
+    padding: 0% 5%;
+    max-width: 60ch;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: justify;
 }
 
-
-.backgroundtext {
-	grid-area: backgroundtext;
+.portfolio-screen {
+    display: inline-grid;
+    justify-items: center;
+    width: 100%;
+    height: 100vh;
+    grid-template-areas:
+        'portfolio-header'
+        'portfolio-content';
+    color: gainsboro;
+    grid-template-rows: 1fr 9fr;
 
 }
 
-.backgroundright {
-	grid-area: backgroundright;
-	padding-top:40px;
+.portfolio-header {
+    grid-area: portfolio-header;
 }
 
-.geographytitle {
-	grid-area: geographytitle;
+.portfolio-header-text {
+    font-size: 3rem;
 }
 
-.geographyleft {
-	grid-area: geographyleft;
+.portfolio-content {
+    display: inline-grid;
+    grid-area: portfolio-content;
+    justify-items: center;
 }
 
-.geographycenter {
-	grid-area: geographycenter;
+.image {
+    width: 360px;
+    height: 210px;
+    place-self: center;
+    object-fit: cover;
 }
 
-.geographyright {
-	grid-area: geographyright;
+.side-by-side {
+    display: grid;
+    grid-template-areas: "left-side right-side";
+    margin-bottom: 15px;
+    align-content: center;
 }
 
-.spacetitle {
-	grid-area: spacetitle;
+.left-side {
+    grid-area: left-side;
 }
 
-.spaceleft {
-	grid-area: spaceleft;
+.right-side {
+    grid-area: right-side;
 }
 
-.spacemid {
-	grid-area: spacemid;
+.min-sixty {
+    min-width: 60ch;
+    max-width: 60ch;
 }
 
-.spaceright {
-	grid-area: spaceright;
+.resume-screen {
+    display: inline-grid;
+    justify-items: center;
+    width: 100%;
+    height: 100vh;
+    grid-template-areas:
+        'resume-header'
+        'resume-content';
+    color: gainsboro;
+    grid-template-rows: 1fr 9fr;
+
 }
 
-.sourcecls {
-	font-size: 0.7em;
+.resume-header {
+    grid-area: resume-header;
+}
+
+.resume-header-text {
+    font-size: 3rem;
+}
+
+.resume-content {
+    display: inline-grid;
+    grid-area: resume-content;
+    justify-items: left;
+    margin: 0px 40px;
+}
+
+.education-card {
+    margin-left: 20px;
 }

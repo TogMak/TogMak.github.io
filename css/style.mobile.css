@@ -1,0 +1,44 @@
+@media (max-width: 600px) {
+    html{
+        background-image: linear-gradient(0deg, #4B4376, #1A1A1D);
+    }
+    .container {
+        grid-template-areas:
+            'nav'
+            'main';
+        grid-template-rows: 35vh 1fr;
+        grid-template-columns: 1fr !important;
+
+    }
+
+    .nav {
+        margin-top: 0px;
+        border-right: 0px;
+        border-bottom: 1px solid #373036;
+    }
+    .side-by-side{
+        display: grid;
+        grid-template-areas: "left-side"
+                             "right-side";
+    }
+    .right-side{
+        margin-top: 20px;
+    }
+    .min-sixty{
+        min-width: 0ch;
+        max-width: 60ch;
+    }
+    .resume-content{
+        justify-items: left;
+    }
+    .education-card{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .container {
+        grid-template-columns: 1fr 2fr;
+    }
+
+}
