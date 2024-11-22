@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -28,6 +30,7 @@ body {
     justify-items: center;
     align-content: center;
     border-right: 1px solid #373036;
+    margin-bottom: 350px;
 }
 
 .nav-ul {
@@ -49,25 +52,16 @@ a,
 a:link {
     color: #E4B1F0;
 }
-a,
-a:hover {
-    color: white;
-}
-a,
+
 a:visited {
     color: #a269af;
 }
-a,
-a:visited:hover{
+a:hover {
     color: white;
 }
-a,
+
 a:active {
     color: #eae2b7;
-}
-a,
-a::after{
-    color: #6e2f7c;
 }
 
 .active {
@@ -196,4 +190,12 @@ a::after{
 
 .education-card {
     margin-left: 20px;
+}
+
+.ulheader {
+    text-decoration: none;
+    font-size: 3.7rem;
+    font-weight: 700;
+    color: #bde0fe !important; 
+    padding-bottom: 160px;
 }
